@@ -4,14 +4,14 @@ block body
     h2 Projects
 
     #list
-        if( projects.length > 0 )
-            ul#projects-list
+        ul#projects-list
+            if( projects.length > 0 )
                 each project in projects
                     li
                         a(href="/project/#{project.id}") #{project.title}
                         a.delete(href="/project/#{project.id}") Delete Project
-        else
-            p No projects yet. Why not create one?
+            else
+                p No projects yet. Why not create one?
 
     h3 Add a Project
     form#add(action="/projects", method="POST")
