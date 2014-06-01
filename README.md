@@ -2,7 +2,7 @@
 
 This is a simple TODO list website (without user sessions) for an example of utilising MySQL with Sequalize. Users can create new TODO lists, add tasks, delete tasks and delete TODO lists.
 
-It uses **MySQL** for persistant storage; using the node module **mysql** as the MySQL driver. It uses **sequelize** as the database API, enabling straight forward database setup amoung other features. **Jade** is used for the view template engine, **express** for the web framework and also the useful **body-parser** middleware.
+It uses **MySQL** for persistant storage; using the node module **mysql** as the MySQL driver. It uses **sequelize** as the database API, enabling straight forward database setup amongst other features. **Jade** is used for the view template engine, **express** for the web framework and also the useful **body-parser** middleware.
 
 Make sure to have MySQL installed on your machine. Installing MySQL CLI is easy on Mac OS X using [brew](http://brew.sh/).
 
