@@ -1,0 +1,22 @@
+extends ./layout.jade
+
+block body
+    h2 Projects
+
+    #list
+        if( projects.length > 0 )
+            ul#projects-list
+                each project in projects
+                    li
+                        a(href="/project/#{project.id}") #{project.title}
+                        a.delete(href="/project/#{project.id}") Delete Project
+        else
+            p No projects yet. Why not create one?
+
+    h3 Add a Project
+    form#add(action="/projects", method="POST")
+        p
+            label Project Title
+            input(type="text", name="title")
+        p
+            button(type="submit") Add Project

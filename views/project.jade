@@ -1,0 +1,22 @@
+extends ./layout.jade
+
+block body
+    h2 Task for project #{project.title}
+
+    #list
+        ul#tasks-list
+            if( tasks.length > 0 )
+                each task in tasks
+                    li
+                        span #{task.title}
+                        a.delete(href="/task/#{task.id}") Delete Task
+
+            else
+                p No tasks yet. Why not add a task?
+
+    form#add(action="/project/#{project.id}/tasks", method="POST")
+        p
+            label Task Title
+            input(type="text", name="title")
+        p
+            button(type="submit") Add Task

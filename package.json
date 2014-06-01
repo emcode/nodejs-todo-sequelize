@@ -1,0 +1,13 @@
+{
+  "name": "mysql-with-sequelize",
+  "description": "MySQL database using Sequelize",
+  "private": "true",
+  "version": "0.0.1",
+  "dependencies": {
+    "express": "4.3.1",
+    "jade": "1.3.1",
+    "sequelize": "1.7.5",
+    "body-parser": "1.2.0",
+    "mysql": "~2.3.2"
+  }
+}
