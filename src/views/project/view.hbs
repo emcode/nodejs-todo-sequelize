@@ -1,0 +1,38 @@
+<hr>
+
+<h2>Project: {{ project.title }}</h2>
+
+<p>{{ project.description }}</p>
+
+<hr>
+
+<h2>Task list</h2>
+<table class="table">
+    <thead>
+    <tr>
+        <th>#</th>
+        <th>Title</th>
+        <th>Description</th>
+        <th class="actions">Actions</th>
+    </tr>
+    </thead>
+    <tbody>
+    {{#each project.tasks}}
+        <tr>
+            <th scope="row">{{ addOne @index }}</th>
+            <td>{{ this.title }}</td>
+            <td>{{ this.description }}</td>
+            <td class="actions">
+                <form class="delete-project-form d-inline" action="/api/project/{{ this.projectId }}/task/{{ this.id }}" method="delete">
+                    <button type="submit" class="btn d-inline btn-sm btn-outline-danger">Remove</button>
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+    </tbody>
+</table>
+
+<hr>
+
+<h2>Create task</h2>
+{{> create_task_form project=project }}

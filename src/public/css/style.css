@@ -1,0 +1,15 @@
+body {
+    padding-top: 2rem;
+}
+
+td.actions {
+    min-width: 200px
+}
+
+h1, h2 {
+    font-weight: 300;
+}
+
+hr {
+    margin: 2rem 0;
+}
