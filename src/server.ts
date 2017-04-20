@@ -1,5 +1,4 @@
 
-
 import * as express from 'express';
 import { Application } from "express";
 import { initRestApi } from "./api/api";

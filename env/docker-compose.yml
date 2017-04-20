@@ -17,7 +17,7 @@ services:
       context: ./..
       dockerfile: ./env/node-app/Dockerfile
     volumes:
-      - "./..:/srv/app"
+      - "./../src:/srv/app/src"
     depends_on:
       - mysql_db
     ports:

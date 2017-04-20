@@ -4,4 +4,4 @@ EXPOSE 8090
 COPY . /srv/app
 RUN cd /srv/app && npm install && npm cache clean
 WORKDIR /srv/app
-CMD npm run start
+CMD npm run watch
