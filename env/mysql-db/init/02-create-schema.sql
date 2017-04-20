@@ -1,0 +1,22 @@
+
+USE 'project_manager';
+
+CREATE TABLE IF NOT EXISTS project_manager.project (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL,
+  PRIMARY KEY (id)
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;
+
+CREATE TABLE IF NOT EXISTS project_manager.task (
+  id INTEGER NOT NULL AUTO_INCREMENT,
+  title VARCHAR(255) NOT NULL,
+  description VARCHAR(255) NOT NULL,
+  projectId INTEGER NOT NULL,
+  createdAt DATETIME NOT NULL,
+  updatedAt DATETIME NOT NULL,
+  PRIMARY KEY (id),
+  FOREIGN KEY (projectId) REFERENCES project(id) ON DELETE CASCADE
+) DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci ENGINE = InnoDB;

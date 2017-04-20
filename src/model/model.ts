@@ -4,7 +4,7 @@ import { Sequelize, LoggingOptions } from 'sequelize';
 import { initProjectModel } from "./initProjectModel";
 import { initTaskModel } from "./initTaskModel";
 
-const dbUrl = 'mariadb://project_manager_user:project_manager_password@localhost:3306/project_manager';
+const dbUrl = 'mariadb://project_manager_user:project_manager_password@mysql_db:3306/project_manager';
 
 const options: LoggingOptions = { benchmark: true, logging:console.log };
 
